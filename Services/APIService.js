@@ -51,7 +51,8 @@ angular.module('JTextMinerApp')
 
     function baseSearch(path, data, config) {
         let server = 'dev.dicta.org.il';
-        if ($location.host().startsWith('server'))
+        if ($location.host().startsWith('server')
+                || $location.host().startsWith('search'))
             server = $location.host();
         return $http.post($location.protocol() + '://' + server + '/' + path + '/', data, config);
     }
