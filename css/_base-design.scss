@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'TaameyDavidCLM';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/TaameyDavidCLM-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'TaameyDavidCLM';
+    font-weight: bold;
+    font-style: normal;
+    src: url('../fonts/TaameyDavidCLM-Bold.woff') format('woff');
+}
+%fonts {
+    font-family: 'Open Sans', 'TaameyDavidCLM', sans-serif;
+}
+
+// colors
+$black-pearl: #1C222D;
+$ebony-clay: #222B37;
+$light-slate-grey: #848F99;
+$grey: #929292;
+$geyser: #D5DCE0;
+$porcelain: #F6F8F9;
+
+// colors for buttons
+$dodger-blue: #0C8BFF;
+$lighten-dodger-blue: #3BA1FF;
+$bright-turquoise: #0CFFB8;
+$lighten-bright-turquoise: #8AFFDD;
+
+// colors for classes
+$butterfly-bush-1st: #634C9F;
+$sun-glow-2nd: #FFD933;
+$tradewind-3rd: #4EB6A3;
+$chestnut-4th: #B65A4E;
+
+$color-list: $butterfly-bush-1st, $sun-glow-2nd, $tradewind-3rd, $chestnut-4th;
+@mixin generate-colors() {
+    @for $i from 1 through length($color-list)
+    {
+        $current-color: nth($color-list, $i) !global;
+        $current-color-index: $i - 1 !global;
+        @content
+    }
+}
+
+%results-summary {
+    background-color: $porcelain;
+    border-radius: 3px;
+    padding: 24px 38px;
+}

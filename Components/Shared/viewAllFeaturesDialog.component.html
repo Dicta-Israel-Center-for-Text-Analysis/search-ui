@@ -1,0 +1,37 @@
+﻿<div class="">
+    <in-progress></in-progress>
+    <div class="modal-content" style="width: 1000px;left: calc(50% - 450px)">
+        <div class="modal-header">
+            <h4>
+                <button type="button" class="close" data-dismiss="modal" ng-click="$ctrl.onConfirm()" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <span style="color: #337ab7">View All Features</span></h4>
+
+
+        </div>
+        <div class="modal-body">
+            <div class="row">
+            <div ng-if="$ctrl.features.length" class="col-sm-12">
+                    <div id="featureSetFeatureTable" class="feature" style="height: 500px;overflow-y: auto">
+                        <feature-table is-select-disabled="true" classes="$ctrl.classes" features="$ctrl.features" is-morphology="true"></feature-table>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="!$ctrl.features.length" class="col-sm-12 text-center">
+                <h3>No features found.</h3>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="footer_content1">
+                        <h4>
+                            <button class="btn btn-primary" ng-click="$ctrl.onConfirm()"><strong> <i class="fa fa-check-circle-o"></i> OK </strong></button>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+﻿<div>
+    <!--<div>
+        The morphological and syntactic data for our Biblical corpus is derived from the ETCBC4 database
+        (
+        <a href="http://dx.doi.org/10.17026%2Fdans-2z3-arxf">LINK</a>
+        )
+    </div>-->
+    <!--<br />-->
+    <div>
+        <div class="select-corpus-tabs">
+            <ul>
+                <li class="{{$ctrl.mode == 'select' ? 'active' : ''}}" ng-click="$ctrl.mode = 'select'">Collections</li>
+                <li class="{{$ctrl.mode == 'saved' ? 'active' : ''}}" ng-click="$ctrl.mode = 'saved'">Saved</li>
+                <li class="{{$ctrl.mode == 'recent' ? 'active' : ''}}"ng-click="$ctrl.mode = 'recent'">Recent</li>
+            </ul>
+        </div>
+        <div class="select-corpus-top-area">
+            <div class="select-corpus-select-all"><input title="Select All" type="checkbox" ng-click="$ctrl.toggleAll()"></div>
+            <div class="select-corpus-up" ng-click="$ctrl.goUp()"><i class="material-icons">arrow_upward</i></div>
+            <div class="select-corpus-breadcrumb">
+                <ol class="breadcrumb">
+                    <li ng-repeat="crumb in $ctrl.breadCrumbs"><a ng-click="$ctrl.selectCrumb($index)">{{crumb.title}}</a></li>
+                </ol>
+            </div>
+        </div>
+        <div ng-show="$ctrl.mode == 'select'" class="row">
+            <div class="col-xs-3 text-selection-rows">
+                <table>
+                    <colgroup>
+                        <col width="30px">
+                        <col width="250px">
+                    </colgroup>
+                    <tr ng-repeat="item in $ctrl.treeNode">
+                        <td><input
+                                type="checkbox"
+                                name="selectedNodes[]"
+                                value="{{item.key}}"
+                                id="{{item.key}}"
+                                class="select-corpus-checkbox"
+                                ng-checked="$ctrl.isNodeSelected(item.key)"
+                                ng-click="$ctrl.toggleSelection(item.key)"
+                                ui-indeterminate="$ctrl.isNodePartial(item.key)"
+                        >
+                        </td>
+                        <td ng-switch="item.children != null && item.children.length > 0">
+                            <a ng-switch-default ng-click="$ctrl.expandNode(item.title)">{{item.title}}
+                                <span class="select-corpus-arrow glyphicon glyphicon-menu-right"></span></a>
+                            <span ng-switch-when="false">{{item.title}}</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-xs-9">
+                <div ng-hide="$ctrl.running || $ctrl.previewText" class="preview-text-message">
+                    <replace ng-if="$ctrl.explanationComponent" with="$ctrl.explanationComponent"></replace>
+                </div>
+                <in-progress progress-flag="$ctrl.running"></in-progress>
+                <div ng-show="!$ctrl.running && $ctrl.previewText" class="preview-text">
+                    <div dir="rtl" ng-repeat="chapter in $ctrl.previewText | limitTo:10 ">
+                        <div ng-repeat="line in chapter.contents">
+                            {{line.smallUnit.chunkKey.substring(line.smallUnit.chunkKey.lastIndexOf(' '))}}:
+                            {{line.smallUnit.text}}
+                        </div>
+                    </div>
+                    <div dir="rtl" ng-show="$ctrl.previewText.length > 10">
+                        ...
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-show="$ctrl.mode == 'saved'" class="text-selection-rows">
+            <saved-data-table heading="'SAVED SEARCHES AND SELECTIONS'" expanded="true"
+                              saved-selections="$ctrl.UserService.savedSelections" on-saved-data-selected="$ctrl.saveClass(text)"></saved-data-table>
+        </div>
+        <div ng-show="$ctrl.mode == 'recent'" class="text-selection-rows">
+            <saved-data-table heading="'RECENT SELECTIONS'" expanded="true"
+                              saved-selections="$ctrl.UserService.recentSelections" on-saved-data-selected="$ctrl.saveClass(text)"></saved-data-table>
+        </div>
+    </div>
+</div>

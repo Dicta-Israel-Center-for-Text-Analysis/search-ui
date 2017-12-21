@@ -1,0 +1,74 @@
+@import "base-design";
+
+/* main page controls */
+
+.main-page-controls {
+    position: fixed;
+    top: 0;
+    width: 244px;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: $porcelain;
+    box-shadow: 0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15);
+    +.container-fluid {
+        padding-left: 250px;
+    }
+}
+
+.main-page-selection-summary {
+    border: solid 1px $ebony-clay; // prevent margins of elements inside from escaping
+    padding-bottom: 10px;
+    background-color: $ebony-clay;
+    color: #fff;
+    h1 {
+        padding: 15px 20px 0 20px;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    h2 {
+        margin-top: 0;
+        padding: 0 20px 0 20px;
+        font-size: 15px;
+        line-height: 1.3em;
+    }
+    a {
+        display: inline-block;
+        padding: 30px 20px 20px 20px;
+        color: #fff;
+        font-size: 13px;
+        i {
+            float: left;
+            padding: 2px 8px;
+            font-size: 13px;
+            color: $bright-turquoise;
+        }
+    }
+}
+
+.nav-tabs-left {
+    list-style-type: none;
+    padding: 0;
+    li {
+        list-style: none;
+        padding: 20px;
+        a {
+            color: $ebony-clay;
+            i {
+                display: inline-block;
+                margin-bottom: -10px;
+                color: $light-slate-grey;
+            }
+            &:hover {
+                color: $black-pearl;
+                i {
+                    color: $black-pearl;
+                }
+                text-decoration: none;
+            }
+        }
+    }
+    background-color: $porcelain;
+    .active-tab {
+        background-color: white;
+    }
+}

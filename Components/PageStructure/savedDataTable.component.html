@@ -1,0 +1,28 @@
+    <div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h5 ng-click="$ctrl.expanded = !$ctrl.expanded">
+                <i ng-show="!$ctrl.expanded" class="glyphicon glyphicon-triangle-right"></i>
+                <i ng-show="$ctrl.expanded" class="glyphicon glyphicon-triangle-bottom"></i> {{$ctrl.heading}}</h5>
+        </div>
+    </div>
+    <div class="row" ng-show="$ctrl.expanded">
+        <div class="col-xs-12">
+            <table class="table">
+                <colgroup>
+                    <col class="col-xs-7">
+                    <col class="col-xs-2">
+                    <col class="col-xs-2">
+                </colgroup>
+                <tbody>
+                <tr><th>Name</th><th>Type</th><th>Date Created</th></tr>
+                <tr class="saved-data-table-row" ng-click="$ctrl.onSavedDataSelected({text: saveData.text})" ng-repeat="saveData in $ctrl.savedSelections track by $index">
+                    <td>{{saveData.title}} <span class="subtitle">{{saveData.subtitle}}</span></td>
+                    <td><span class="badge">{{saveData.type}}</span></td>
+                    <td>{{$ctrl.formatDate(saveData.time)}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

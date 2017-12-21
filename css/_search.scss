@@ -1,0 +1,130 @@
+@import "base-design";
+
+/* search page */
+.search-control {
+    color: $ebony-clay;
+    @extend %fonts
+}
+
+.search-top-bar {
+    height: 68px;
+    background-color: $ebony-clay;
+}
+
+.search-control-bar {
+    line-height: 52px;
+    min-height: 52px;
+    background-color: $porcelain;
+}
+
+.search-top-bar-form {
+    display: inline-block;
+    margin-left: -30px;
+    font-size: 21px;
+    line-height: 68px;
+    background-color: $ebony-clay;
+    width: 100%;
+}
+
+.search-top-bar-form-control {
+    height: 34px;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    width: auto;
+    display: inline;
+    color: #fff;
+    background: $ebony-clay none;
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: none;
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    outline: none;
+}
+
+.search-top-bar-button {
+    color: $light-slate-grey;
+}
+
+.search-autocomplete-container {
+    display: inline-block;
+    margin: 0 15px 0;
+    width: calc(100% - 80px);
+    direction: rtl;
+    border-bottom: solid 1px $light-slate-grey;
+}
+
+.search-result-summary {
+    line-height: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid $geyser;
+    padding: 24px 0;
+    margin-right: -30px;
+}
+
+.search-result {
+    box-sizing: border-box;
+    border-bottom: 1px solid $geyser;
+    margin-left: 15px;
+}
+
+.search-result-heading {
+    color: $light-slate-grey;
+    @extend %fonts;
+    font-size: 13px;
+    line-height: 24px;
+    .material-icons {
+        font-size: 13px;
+        padding-bottom: 3px;
+        vertical-align: middle;
+    }
+}
+
+.search-result-text {
+    line-height: 27px;
+    font-size: 18px;
+    @extend %fonts;
+    letter-spacing: 0.05em;
+}
+
+.search-top-left {
+    float: left;
+}
+
+.search-top-bar-input {
+    background-color: #fff;
+    color: $ebony-clay;
+    width: 100%;
+}
+
+.form-inline input.search-start-control-class {
+    width: 550px;
+    margin-left: -50px;
+    direction: rtl;
+}
+
+.only-showing-verses {
+    font-weight: normal;
+}
+
+.search-full-toggle {
+    padding: 15px 0;
+}
+
+.related-search-terms {
+    line-height: 24px;
+    font-size: 15px;
+    margin-right: -30px;
+    padding: 24px 0;
+    border-bottom: 1px solid $geyser;
+    h2 {
+        margin: 0 0 14px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+}
+.related-search-suggestion {
+    font-size: 17px;
+}

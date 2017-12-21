@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103843509-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-103843509-1');
+    </script>
+
+    <title>Dicta- Center of Text Analysis</title>
+
+    <link rel="icon" href="/favicon.png" />
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&subset=greek,hebrew,latin-ext" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Martel:600,900|Open+Sans:400,400i,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="all" />
+    <link rel="stylesheet" href="node_modules/ng-dialog/css/ngDialog.min.css" />
+    <link rel="stylesheet" href="node_modules/ng-dialog/css/ngDialog-theme-default.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/design.css" media="all" />
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBfOsXaYARLV-dFSy-y48dmQU-54o0p9W8",
+            authDomain: "dicta-d023a.firebaseapp.com",
+            databaseURL: "https://dicta-d023a.firebaseio.com",
+            projectId: "dicta-d023a",
+            storageBucket: "",
+            messagingSenderId: "372281311229"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/lodash/lodash.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>
+	<script type="text/javascript" src="node_modules/angular-ui-indeterminate/dist/indeterminate.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+
+    <!-- bootstrap -->
+    <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+
+    <!-- ngDialog -->
+    <script src="node_modules/ng-dialog/js/ngDialog.min.js" type="application/javascript"></script>
+
+    <script src="js/Common/jquery.cookie.js" type="text/javascript"></script>
+
+    <script src="js/angu-fixed-header-table.js"></script>
+
+    <script src="node_modules/angular-bootstrap-contextmenu/contextMenu.js"></script>
+    <script src="App/JTextMinerApp.js" type="text/javascript"></script>
+    <script src="App/JTextMinerDirectives.js" type="text/javascript"></script>
+    <script src="Services/FileUploadService.js" type="text/javascript"></script>
+
+    <script src="Components/Shared/inProgress.component.js" type="text/javascript"></script>
+    <script src="Components/Shared/TextSelection/selectOnlineCorpus.component.js" type="text/javascript"></script>
+    <script src="Components/Shared/TextSelection/actionMode.component.js" type="text/javascript"></script>
+    <script src="Components/Shared/TextSelection/browseThisComputer.component.js" type="text/javascript"></script>
+    <script src="Components/Shared/TextSelection/chooseTextDialog.component.js" type="text/javascript"></script>
+    <script src="Components/PageStructure/savedDataTable.component.js" type="application/javascript"></script>
+
+    <script src="Services/TreeService.js" type="text/javascript"></script>
+
+
+    <script src="Components/Search/search.service.js"></script>
+    <script src="Components/Search/search.component.js"></script>
+    <script src="Services/bibleContextMenu.service.js"></script>
+
+    <script type="text/javascript" src="Services/APIService.js"></script>
+    <script type="text/javascript" src="Services/UserService.js"></script>
+    <script src="Services/StateService.js"></script>
+    <script src="Services/DialogService.js"></script>
+    <script src="Components/PageStructure/continueLogin.component.js"></script>
+    <script src="Components/Search/searchFrontPage.component.js"></script>
+    <script src="App/replaceDirective.js"></script>
+
+</head>
+<body ng-app="JTextMinerApp">
+
+    <!-- links
+    https://scotch.io/tutorials/angular-routing-using-ui-router
+    https://github.com/angular-ui/ui-router/wiki/Multiple-Named-Views
+    -->
+            <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+            <div ui-view></div>
+<noscript>This application requires javascript.</noscript>
+</body>
+</html>

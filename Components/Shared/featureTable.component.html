@@ -1,0 +1,29 @@
+﻿<table class="table table-striped feature-set-table" ng-if="$ctrl.features && $ctrl.features.length > 0">
+    <tr class="vfeature_content">
+        <td><a href="" ng-click="sortClick('name')">Feature <span ng-class="arrowClass('name')"></span></a></td>
+        <td><a href="" ng-click="sortClick('className')">Class <span ng-class="arrowClass('className')"></span></a></td>
+        <td class="vimages_2">Occurrences</td>
+        <td class="vimages_three">Frequency</td>
+        <td class="vimages_3"><a href="" ng-click="sortClick('-maxTTest')">T-test <span ng-class="arrowClass('-maxTTest')"></span></a></td>
+    </tr>
+    <tr ng-repeat="feature in $ctrl.features|orderBy:sortKey:sortReverse" ng-class="feature.selected ? '' : 'disabled-table-row'">
+        <td class="icon-td"><input type="checkbox" ng-if="!$ctrl.isSelectDisabled" ng-model="feature.selected"> <b ng-click="$ctrl.showExamples(feature)">{{convertFeatureName(feature.name)}}</b>
+        </td>
+        <td>
+            <div class="class-dot" ng-style="classNameToBgStyle(feature.className)"></div>
+            {{feature.className}}
+        </td>
+        <td>??</td>
+        <td>
+            <feature-frequency-graph feature-id="a"
+                                     classaverages='feature.averageForEachClass'
+                                     ttest='{{feature.maxTTest}}'
+            ></feature-frequency-graph>
+        </td>
+        <td>{{feature.maxTTest}}</td>
+    </tr>
+
+</table>
+<div class="feature-set-table-empty" ng-if="!$ctrl.features || $ctrl.features.length === 0">
+    No features found.
+</div>

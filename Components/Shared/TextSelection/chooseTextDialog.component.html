@@ -1,0 +1,50 @@
+<div>
+    <div ng-hide="$ctrl.embedded" class="dialog-close">
+        <span ng-click="$ctrl.onCancel()"><i class="material-icons">close</i></span>
+    </div>
+    <div class="ngdialog-message choose-text-dialog">
+        <action-mode on-action-mode-changed="$ctrl.changeActionMode(mode)"></action-mode>
+        <in-progress></in-progress>
+        <!--<br/>-->
+        <div ng-show="$ctrl.actionMode == 'BrowseThisComputer' && !$ctrl.showInProcess">
+            <browse-this-computer browse-data="$ctrl.browseData"></browse-this-computer>
+        </div>
+        <div ng-show="$ctrl.actionMode == 'SelectOnlineCorpus' && !$ctrl.showInProcess">
+            <select-online-corpus selection-text="$ctrl.selectionText" on-load-saved="$ctrl.loadSaved(saved)"
+                                  explanation-component="$ctrl.explanationComponent"></select-online-corpus>
+        </div>
+        <br/>
+        <!--<table ng-if="$ctrl.namingMessage" style="width:100%;">-->
+            <!--<tr>-->
+                <!--<td>-->
+                    <!--<div class="name-class">-->
+                        <!--<label>{{$ctrl.namingMessage}}: </label>-->
+                        <!--<input class="name-class form-control" autofocus ng-model="$ctrl.className"-->
+                               <!--ng-change="$ctrl.userChangedName()"-->
+                               <!--ng-style="$ctrl.calculateName ? { 'font-style': 'italic' } : null"-->
+                               <!--type="text"/>-->
+                    <!--</div>-->
+                <!--</td>-->
+            <!--</tr>-->
+        <!--</table>-->
+    </div>
+    <div class="dialog-button-area">
+        <div class="preview-name">
+            <p class="your-selection">YOUR SELECTION:</p>
+            <p>{{$ctrl.getProposedName()}}</p>
+        </div>
+        <div ng-show="!$ctrl.editingDescription" class="choose-dialog-add-description"><a ng-click="$ctrl.addDescription()">
+            {{ $ctrl.hasDescription() ? $ctrl.description: 'Add Description'}}
+        </a></div>
+        <div ng-show="$ctrl.editingDescription" class="choose-dialog-add-description">
+            <form>
+                <input class="add-description-input" title="Add Description" placeholder="Choose a description"
+                       type="text" ng-model="$ctrl.description" autofocus ng-blur="$ctrl.blurDescription()">
+            </form>
+        </div>
+        <div class="alternative-action" ng-if="$ctrl.alternative"><a ng-click="$ctrl.confirm(true)">{{$ctrl.alternative}}</a> or</div>
+        <button type="button" class="rounded-btn btn-green"
+                ng-click="$ctrl.confirm()"><span ng-if="!$ctrl.saveMessage">Save</span>{{$ctrl.saveMessage}}
+        </button>
+    </div>
+</div>

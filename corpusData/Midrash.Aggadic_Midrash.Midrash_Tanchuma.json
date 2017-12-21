@@ -1,0 +1,26 @@
+[
+
+{"title": "Book 1",
+"key": "Midrash/Aggadic Midrash/Midrash Tanchuma/Book 1",
+"id": "Midrash.Aggadic_Midrash.Midrash_Tanchuma.1",
+"children": "Midrash.Aggadic_Midrash.Midrash_Tanchuma.1.json"},
+
+{"title": "Book 2",
+"key": "Midrash/Aggadic Midrash/Midrash Tanchuma/Book 2",
+"id": "Midrash.Aggadic_Midrash.Midrash_Tanchuma.2",
+"children": "Midrash.Aggadic_Midrash.Midrash_Tanchuma.2.json"},
+
+{"title": "Book 3",
+"key": "Midrash/Aggadic Midrash/Midrash Tanchuma/Book 3",
+"id": "Midrash.Aggadic_Midrash.Midrash_Tanchuma.3",
+"children": "Midrash.Aggadic_Midrash.Midrash_Tanchuma.3.json"},
+
+{"title": "Book 4",
+"key": "Midrash/Aggadic Midrash/Midrash Tanchuma/Book 4",
+"id": "Midrash.Aggadic_Midrash.Midrash_Tanchuma.4",
+"children": "Midrash.Aggadic_Midrash.Midrash_Tanchuma.4.json"},
+
+{"title": "Book 5",
+"key": "Midrash/Aggadic Midrash/Midrash Tanchuma/Book 5",
+"id": "Midrash.Aggadic_Midrash.Midrash_Tanchuma.5",
+"children": "Midrash.Aggadic_Midrash.Midrash_Tanchuma.5.json"}]

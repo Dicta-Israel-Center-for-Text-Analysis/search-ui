@@ -1,0 +1,47 @@
+<div class="">
+    <div class="modal-content" style="width: 1000px;left: calc(50% - 450px)">
+        <div class="modal-header">
+            <h4>
+                <button type="button" class="close" data-dismiss="modal" ng-click="$ctrl.onConfirm()"
+                        aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <span style="color: #337ab7">View Crossvalidation Results</span>
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-xs-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td>Predicted</td>
+                                <td>Actual</td>
+                                <td>Name of sample</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="chunk in $ctrl.sortedFilteredList">
+                                <td>{{chunk.className}}</td>
+                                <td>{{chunk.realClassName}}</td>
+                                <td>{{$ctrl.removePrefix(chunk.filename)}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="footer_content1">
+                        <h4>
+                            <button class="btn btn-primary" ng-click="$ctrl.onConfirm()"><strong> <i
+                                    class="fa fa-check-circle-o"></i> OK </strong></button>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

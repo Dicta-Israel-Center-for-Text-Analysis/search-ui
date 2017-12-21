@@ -1,0 +1,1143 @@
+@font-face {
+  font-family: 'TaameyDavidCLM';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/TaameyDavidCLM-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'TaameyDavidCLM';
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/TaameyDavidCLM-Bold.woff") format("woff");
+}
+
+.search-control, .search-result-heading, .search-result-text, .classification-wizard-superscript, .sub-heading, .text-selection-rows, .preview-text, .info-heading, .adjustment-text, .main-heading, .text-with-features p, .text-title, .class-number, .class-label, .classification-summary-cv, .classification-summary-label, .classification-summary-cv-details, .badge a, .choose-dialog-add-description, .alternative-action {
+  font-family: 'Open Sans', 'TaameyDavidCLM', sans-serif;
+}
+
+.segmentation-summary, .classification-summary {
+  background-color: #F6F8F9;
+  border-radius: 3px;
+  padding: 24px 38px;
+}
+
+@font-face {
+  font-family: 'TaameyDavidCLM';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/TaameyDavidCLM-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'TaameyDavidCLM';
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/TaameyDavidCLM-Bold.woff") format("woff");
+}
+
+.search-control, .search-result-heading, .search-result-text, .classification-wizard-superscript, .sub-heading, .text-selection-rows, .preview-text, .info-heading, .adjustment-text, .main-heading, .text-with-features p, .text-title, .class-number, .class-label, .classification-summary-cv, .classification-summary-label, .classification-summary-cv-details, .badge a, .choose-dialog-add-description, .alternative-action {
+  font-family: 'Open Sans', 'TaameyDavidCLM', sans-serif;
+}
+
+.segmentation-summary, .classification-summary {
+  background-color: #F6F8F9;
+  border-radius: 3px;
+  padding: 24px 38px;
+}
+
+/* front page */
+.form-inline input.search-control-class.form-control {
+  width: 350px;
+  margin-left: -50px;
+}
+
+.side-space {
+  padding: 0 27px;
+}
+
+.jumbo {
+  background-color: #F6F8F9;
+  padding-bottom: 125px;
+  color: #222B37;
+}
+
+.jumbo-start {
+  padding-top: 125px;
+}
+
+.jumbo-text-selection {
+  padding-top: 53px;
+}
+
+.jumbo-subtext {
+  padding-top: 20px;
+}
+
+.jumbo-subtext a {
+  text-decoration: underline;
+  color: #222B37;
+}
+
+.header-link {
+  color: darkgrey;
+}
+
+.main-logo {
+  padding-left: 60px;
+  font-size: 70px;
+  font-family: Martel, serif;
+  color: #222B37;
+}
+
+.main-logo sup {
+  font-size: 20px;
+  top: -60px;
+  left: -40px;
+  font-weight: 600;
+}
+
+.search-control-class {
+  border: none;
+  box-shadow: none;
+  color: #929292;
+}
+
+@font-face {
+  font-family: 'TaameyDavidCLM';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/TaameyDavidCLM-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'TaameyDavidCLM';
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/TaameyDavidCLM-Bold.woff") format("woff");
+}
+
+.search-control, .search-result-heading, .search-result-text, .classification-wizard-superscript, .sub-heading, .text-selection-rows, .preview-text, .info-heading, .adjustment-text, .main-heading, .text-with-features p, .text-title, .class-number, .class-label, .classification-summary-cv, .classification-summary-label, .classification-summary-cv-details, .badge a, .choose-dialog-add-description, .alternative-action {
+  font-family: 'Open Sans', 'TaameyDavidCLM', sans-serif;
+}
+
+.segmentation-summary, .classification-summary {
+  background-color: #F6F8F9;
+  border-radius: 3px;
+  padding: 24px 38px;
+}
+
+/* search page */
+.search-control {
+  color: #222B37;
+}
+
+.search-top-bar {
+  height: 68px;
+  background-color: #222B37;
+}
+
+.search-control-bar {
+  line-height: 52px;
+  min-height: 52px;
+  background-color: #F6F8F9;
+}
+
+.search-top-bar-form {
+  display: inline-block;
+  margin-left: -30px;
+  font-size: 21px;
+  line-height: 68px;
+  background-color: #222B37;
+  width: 100%;
+}
+
+.search-top-bar-form-control {
+  height: 34px;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  width: auto;
+  display: inline;
+  color: #fff;
+  background: #222B37 none;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: none;
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  outline: none;
+}
+
+.search-top-bar-button {
+  color: #848F99;
+}
+
+.search-autocomplete-container {
+  display: inline-block;
+  margin: 0 15px 0;
+  width: calc(100% - 80px);
+  direction: rtl;
+  border-bottom: solid 1px #848F99;
+}
+
+.search-result-summary {
+  line-height: 24px;
+  font-weight: bold;
+  border-bottom: 1px solid #D5DCE0;
+  padding: 24px 0;
+  margin-right: -30px;
+}
+
+.search-result {
+  box-sizing: border-box;
+  border-bottom: 1px solid #D5DCE0;
+  margin-left: 15px;
+}
+
+.search-result-heading {
+  color: #848F99;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.search-result-heading .material-icons {
+  font-size: 13px;
+  padding-bottom: 3px;
+  vertical-align: middle;
+}
+
+.search-result-text {
+  line-height: 27px;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+}
+
+.search-top-left {
+  float: left;
+}
+
+.search-top-bar-input {
+  background-color: #fff;
+  color: #222B37;
+  width: 100%;
+}
+
+.form-inline input.search-start-control-class {
+  width: 550px;
+  margin-left: -50px;
+  direction: rtl;
+}
+
+.only-showing-verses {
+  font-weight: normal;
+}
+
+.search-full-toggle {
+  padding: 15px 0;
+}
+
+.related-search-terms {
+  line-height: 24px;
+  font-size: 15px;
+  margin-right: -30px;
+  padding: 24px 0;
+  border-bottom: 1px solid #D5DCE0;
+}
+
+.related-search-terms h2 {
+  margin: 0 0 14px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.related-search-suggestion {
+  font-size: 17px;
+}
+
+@font-face {
+  font-family: 'TaameyDavidCLM';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/TaameyDavidCLM-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'TaameyDavidCLM';
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/TaameyDavidCLM-Bold.woff") format("woff");
+}
+
+.search-control, .search-result-heading, .search-result-text, .classification-wizard-superscript, .sub-heading, .text-selection-rows, .preview-text, .info-heading, .adjustment-text, .main-heading, .text-with-features p, .text-title, .class-number, .class-label, .classification-summary-cv, .classification-summary-label, .classification-summary-cv-details, .badge a, .choose-dialog-add-description, .alternative-action {
+  font-family: 'Open Sans', 'TaameyDavidCLM', sans-serif;
+}
+
+.segmentation-summary, .classification-summary {
+  background-color: #F6F8F9;
+  border-radius: 3px;
+  padding: 24px 38px;
+}
+
+/* main page controls */
+.main-page-controls {
+  position: fixed;
+  top: 0;
+  width: 244px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #F6F8F9;
+  box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
+}
+
+.main-page-controls + .container-fluid {
+  padding-left: 250px;
+}
+
+.main-page-selection-summary {
+  border: solid 1px #222B37;
+  padding-bottom: 10px;
+  background-color: #222B37;
+  color: #fff;
+}
+
+.main-page-selection-summary h1 {
+  padding: 15px 20px 0 20px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.main-page-selection-summary h2 {
+  margin-top: 0;
+  padding: 0 20px 0 20px;
+  font-size: 15px;
+  line-height: 1.3em;
+}
+
+.main-page-selection-summary a {
+  display: inline-block;
+  padding: 30px 20px 20px 20px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.main-page-selection-summary a i {
+  float: left;
+  padding: 2px 8px;
+  font-size: 13px;
+  color: #0CFFB8;
+}
+
+.nav-tabs-left {
+  list-style-type: none;
+  padding: 0;
+  background-color: #F6F8F9;
+}
+
+.nav-tabs-left li {
+  list-style: none;
+  padding: 20px;
+}
+
+.nav-tabs-left li a {
+  color: #222B37;
+}
+
+.nav-tabs-left li a i {
+  display: inline-block;
+  margin-bottom: -10px;
+  color: #848F99;
+}
+
+.nav-tabs-left li a:hover {
+  color: #1C222D;
+  text-decoration: none;
+}
+
+.nav-tabs-left li a:hover i {
+  color: #1C222D;
+}
+
+.nav-tabs-left .active-tab {
+  background-color: white;
+}
+
+@font-face {
+  font-family: 'TaameyDavidCLM';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/TaameyDavidCLM-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'TaameyDavidCLM';
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/TaameyDavidCLM-Bold.woff") format("woff");
+}
+
+.search-control, .search-result-heading, .search-result-text, .classification-wizard-superscript, .sub-heading, .text-selection-rows, .preview-text, .info-heading, .adjustment-text, .main-heading, .text-with-features p, .text-title, .class-number, .class-label, .classification-summary-cv, .classification-summary-label, .classification-summary-cv-details, .badge a, .choose-dialog-add-description, .alternative-action {
+  font-family: 'Open Sans', 'TaameyDavidCLM', sans-serif;
+}
+
+.segmentation-summary, .classification-summary {
+  background-color: #F6F8F9;
+  border-radius: 3px;
+  padding: 24px 38px;
+}
+
+/* segmentation settings */
+.segmentation-controls button {
+  margin: 30px 0 20px 0;
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'TaameyDavidCLM';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/TaameyDavidCLM-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'TaameyDavidCLM';
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/TaameyDavidCLM-Bold.woff") format("woff");
+}
+
+.search-control, .search-result-heading, .search-result-text, .classification-wizard-superscript, .sub-heading, .text-selection-rows, .preview-text, .info-heading, .adjustment-text, .main-heading, .text-with-features p, .text-title, .class-number, .class-label, .classification-summary-cv, .classification-summary-label, .classification-summary-cv-details, .badge a, .choose-dialog-add-description, .alternative-action {
+  font-family: 'Open Sans', 'TaameyDavidCLM', sans-serif;
+}
+
+.segmentation-summary, .classification-summary {
+  background-color: #F6F8F9;
+  border-radius: 3px;
+  padding: 24px 38px;
+}
+
+.classification-wizard-help {
+  color: #646464;
+  line-height: 1.5em;
+}
+
+.classification-wizard-superscript {
+  color: white;
+  background-color: #646464;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 12px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-top: -9px;
+  margin-left: -19px;
+  vertical-align: top;
+}
+
+.classification-wizard-icon {
+  height: 57px;
+  width: 57px;
+}
+
+.wizard-intro {
+  display: flex;
+  padding: 0 100px;
+}
+
+.sub-heading {
+  color: #1C222D;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 27px;
+}
+
+.wizard-huge-button {
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+  border: #646464 solid 1px;
+  padding: 100px 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.classification-wizard-help-text {
+  margin-top: 20px;
+}
+
+.edit-featureset-dialog-categories {
+  border-top: 1px #848F99 solid;
+}
+
+.edit-featureset-dialog-category {
+  padding: 10px;
+  border-bottom: 1px #848F99 solid;
+}
+
+.edit-featureset-dialog-category.category-active {
+  background-color: #eee;
+}
+
+.edit-featureset-dialog-controls {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.edit-featureset-dialog-update {
+  margin-top: auto;
+}
+
+.edit-featureset-dialog-features {
+  padding-top: 20px;
+}
+
+.feature-set-table-empty {
+  text-align: center;
+  padding: 20px;
+}
+
+.samples-of-feature-examples {
+  height: 500px;
+  overflow: auto;
+  padding: 10px;
+}
+
+/* common pages */
+.rounded-btn {
+  height: 44px;
+  border-radius: 5px;
+  padding: 10px 0;
+  max-width: 215px;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.rounded-btn:focus {
+  outline: none;
+  border: 2px solid #0263BC;
+}
+
+.btn-blue {
+  color: white;
+  background-color: #0C8BFF;
+}
+
+.btn-blue:hover {
+  background-color: #3BA1FF;
+}
+
+.btn-green {
+  color: #1C222D;
+  background-color: #0CFFB8;
+}
+
+.btn-green:hover {
+  background-color: #8AFFDD;
+}
+
+.small-logo {
+  display: inline-block;
+  padding: 0 40px 0 0;
+  font-size: 25px;
+  font-weight: 900;
+  font-family: Martel, serif;
+  color: #fff;
+}
+
+.small-logo sup {
+  font-size: 7px;
+  top: -18px;
+  left: -12px;
+  font-weight: 600;
+}
+
+.top-back-arrow {
+  color: #0CFFB8;
+  font-size: 24px;
+  height: 67px;
+  width: 34px;
+  /*background-color: #646464;*/
+  padding: 22px 0 22px 0;
+  display: inline-block;
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-content {
+  background-color: transparent;
+}
+
+.ngdialog .ngdialog-message {
+  background-color: #fff;
+}
+
+.dialog-button-area {
+  height: 68px;
+  border-radius: 0 0 3px 3px;
+  background-color: #222B37;
+  border: solid 1px #fff;
+  padding: 10px;
+  display: flex;
+}
+
+.dialog-close {
+  background-color: transparent;
+  color: white;
+  height: 3em;
+  width: 100%;
+  text-align: right;
+}
+
+.text-selection-rows, .preview-text {
+  height: 380px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 0 25px;
+  line-height: 32px;
+}
+
+.text-selection-rows {
+  border-right: solid 1px #D5DCE0;
+  padding-right: 5px;
+}
+
+.preview-text-message {
+  text-align: center;
+  padding-top: 150px;
+}
+
+.text-selection-rows td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+}
+
+::placeholder {
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-message.choose-text-dialog {
+  /* margin: -1em; */
+  margin-bottom: 0 !important;
+  height: 500px;
+}
+
+.preview-name {
+  padding-left: 20px;
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  flex: auto;
+  height: 2em;
+  line-height: 1.15em;
+}
+
+.your-selection {
+  font-weight: normal;
+  color: #F6F8F9;
+  font-size: 13px;
+  line-height: 15px;
+  margin: 0;
+}
+
+.classification-controls {
+  padding: 5px;
+}
+
+.saved-data-table-row .subtitle {
+  color: #848F99;
+  padding-left: 10px;
+}
+
+.saved-data-table-row:hover {
+  background-color: #222B37;
+  color: #fff;
+}
+
+.saved-data-table-row:hover .badge {
+  background-color: #0CFFB8;
+  color: #222B37;
+}
+
+.info-heading {
+  color: #1C222D;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.detail-icon {
+  color: #0CFFB8;
+  font-size: 15px;
+  line-height: 16px;
+}
+
+.adjustment-text {
+  color: #1C222D;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 42px 0;
+}
+
+.main-heading {
+  text-transform: uppercase;
+  color: #1C222D;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 27px;
+}
+
+.text-with-features {
+  direction: rtl;
+}
+
+.text-with-features h2 {
+  color: #1C222D;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: right;
+}
+
+.text-with-features .classified-as {
+  font-size: 13px;
+  margin: 0 36px 24px;
+}
+
+.text-with-features p {
+  margin-right: 36px;
+  text-align: right;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.text-title {
+  color: #1C222D;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: right;
+}
+
+.class-color-0 {
+  color: #634C9F;
+}
+
+.class-color-1 {
+  color: #FFD933;
+}
+
+.class-color-2 {
+  color: #4EB6A3;
+}
+
+.class-color-3 {
+  color: #B65A4E;
+}
+
+.class-bg-color-0 {
+  background-color: #634C9F;
+}
+
+.class-bg-color-1 {
+  background-color: #FFD933;
+}
+
+.class-bg-color-2 {
+  background-color: #4EB6A3;
+}
+
+.class-bg-color-3 {
+  background-color: #B65A4E;
+}
+
+.class-segment-color-0, .class-segment-color-1, .class-segment-color-2, .class-segment-color-3 {
+  padding-right: 5px;
+  margin-bottom: 30px;
+}
+
+.class-segment-color-0 {
+  border-right: solid 4px #634C9F;
+}
+
+.class-segment-color-1 {
+  border-right: solid 4px #FFD933;
+}
+
+.class-segment-color-2 {
+  border-right: solid 4px #4EB6A3;
+}
+
+.class-segment-color-3 {
+  border-right: solid 4px #B65A4E;
+}
+
+.highlight-feature-color-0 {
+  padding-bottom: 2px;
+  border-bottom: dashed #634C9F 2px;
+}
+
+.highlight-feature-color-1 {
+  padding-bottom: 2px;
+  border-bottom: dashed #FFD933 2px;
+}
+
+.highlight-feature-color-2 {
+  padding-bottom: 2px;
+  border-bottom: dashed #4EB6A3 2px;
+}
+
+.highlight-feature-color-3 {
+  padding-bottom: 2px;
+  border-bottom: dashed #B65A4E 2px;
+}
+
+.segment {
+  margin-bottom: 10px;
+}
+
+.class-number {
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 12px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-top: 5px;
+  vertical-align: top;
+}
+
+.class-label {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 36px;
+  display: inline;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.class-label h3, .class-label h4 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: inherit;
+}
+
+.class-label h3 {
+  display: inline;
+}
+
+.class-label h4 {
+  font-size: 13px;
+}
+
+.classification-summary-cv-box {
+  text-align: center;
+  border-left: 1px solid #D5DCE0;
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.classification-summary-cv {
+  color: #222B37;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2em;
+}
+
+.classification-summary-label {
+  color: #222B37;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.classification-summary-cv-details {
+  color: #222B37;
+  font-size: 15px;
+  line-height: 24px;
+  text-decoration: underline;
+}
+
+.classification-summary-features {
+  grid-column: 1;
+}
+
+.classification-summary {
+  display: grid;
+  grid-template-columns: 66% 34%;
+}
+
+.badge {
+  color: #fff;
+  font-weight: normal;
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin: 5px 10px 5px 0;
+  background-color: #848F99;
+}
+
+.badge a {
+  color: #fff;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.classification-summary-class-label {
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.main-data {
+  margin: 0 110px;
+}
+
+.training-classes {
+  border-radius: 3px;
+  border: solid 1px #D5DCE0;
+}
+
+.training-class {
+  padding: 10px;
+}
+
+.training-class:not(:first-child) {
+  border-top: solid 1px #D5DCE0;
+}
+
+.classification-controls-options {
+  padding: 10px;
+}
+
+.classification-controls-options a {
+  text-decoration: underline;
+}
+
+.classification-controls-options a:not(:last-child) {
+  margin-right: 40px;
+}
+
+.choose-dialog-add-description {
+  display: inline-block;
+  align-self: center;
+  padding: 10px;
+  color: #F6F8F9;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.choose-dialog-add-description a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.add-description-input {
+  color: #1C222D;
+  padding: 10px;
+}
+
+.login-chooser {
+  margin: auto;
+}
+
+.login-chooser .ngdialog-message {
+  padding: 30px;
+}
+
+.select-corpus-top-area {
+  background-color: #fff;
+  border: 1px solid #D5DCE0;
+  border-radius: 0;
+  display: flex;
+}
+
+.select-corpus-breadcrumb {
+  display: inline-block;
+  width: 70%;
+  height: 60px;
+}
+
+.load-saved-link {
+  display: inline-block;
+  width: 29%;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.load-saved-link .material-icons {
+  vertical-align: bottom;
+}
+
+.breadcrumb {
+  text-transform: uppercase;
+  padding: 23px 15px;
+  color: #848F99;
+  background-color: inherit;
+  margin-bottom: 0;
+}
+
+.breadcrumb > li:last-child {
+  color: #222B37;
+}
+
+.breadcrumb > li + li:before {
+  content: '\00a0>\00a0';
+  padding: 0 5px;
+}
+
+.breadcrumb li a {
+  color: inherit;
+}
+
+.save-menu {
+  float: right;
+}
+
+.classify-save-message, .save-message {
+  color: #848F99;
+  float: right;
+  padding-right: 20px;
+}
+
+.classify-save-control {
+  float: right;
+}
+
+.text-classification-data-dialog {
+  height: 90vh;
+  padding: 25px;
+}
+
+.text-classification-data-dialog td, .text-classification-data-dialog th {
+  padding: 5px;
+}
+
+.text-classification-data-dialog h2 {
+  margin-top: 0;
+}
+
+.text-classification-data-dialog .feature-area {
+  overflow-y: scroll;
+  will-change: transform;
+  max-height: calc(100% - 100px);
+}
+
+.classification-data-classname {
+  vertical-align: top;
+}
+
+.classification-data-classname h4 {
+  line-height: 23.1px;
+  margin-top: 0;
+}
+
+.select-corpus-checkbox, .select-corpus-arrow {
+  opacity: 0.5;
+}
+
+.select-corpus-checkbox:checked, .select-corpus-arrow:checked {
+  opacity: 1;
+}
+
+:hover > * > .select-corpus-checkbox, :hover > * > .select-corpus-arrow {
+  opacity: 1;
+}
+
+.select-corpus-arrow {
+  float: right;
+}
+
+.select-corpus-tabs {
+  text-align: center;
+}
+
+.select-corpus-tabs ul {
+  padding: 0;
+}
+
+.select-corpus-tabs li {
+  padding: 10px;
+  display: inline-block;
+}
+
+.select-corpus-tabs li.active {
+  border-bottom: solid 2px #D5DCE0;
+}
+
+.select-corpus-select-all, .select-corpus-up {
+  width: 42px;
+  height: 60px;
+  border-right: solid 1px #D5DCE0;
+}
+
+.select-corpus-select-all {
+  padding: 20px 10px 10px 13px;
+}
+
+.select-corpus-up {
+  padding: 18px 10px 10px 10px;
+}
+
+.wizard-heading {
+  background-color: #222B37;
+  padding: 15px;
+  color: white;
+  text-align: center;
+}
+
+.wizard-heading .material-icons {
+  float: left;
+  color: white;
+  vertical-align: bottom;
+}
+
+.wizard-intro {
+  min-height: 500px;
+}
+
+.edit-featureset-dialog {
+  min-height: 550px;
+}
+
+.edit-featureset-dialog h1 {
+  color: #646464;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+.edit-featureset-dialog .material-icons {
+  vertical-align: bottom;
+}
+
+.edit-featureset-dialog feature-table {
+  max-height: 500px;
+  margin-bottom: 30px;
+  overflow-y: auto;
+  display: block;
+  will-change: transform;
+}
+
+.alternative-action {
+  display: inline-block;
+  align-self: center;
+  color: #fff;
+  padding: 0 10px;
+}
+
+.alternative-action a {
+  font-weight: bold;
+  color: inherit;
+}
+
+.inherit-font-size {
+  font-size: inherit;
+}
+
+/*# sourceMappingURL=design.css.map */

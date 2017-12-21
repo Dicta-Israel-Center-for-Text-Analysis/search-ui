@@ -1,0 +1,14 @@
+@import "base-design";
+
+/* segmentation settings */
+
+.segmentation-controls {
+  button {
+    margin: 30px 0 20px 0;
+    width: 100%;
+  }
+}
+
+.segmentation-summary {
+  @extend %results-summary;
+}

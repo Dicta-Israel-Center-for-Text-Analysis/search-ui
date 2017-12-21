@@ -1,0 +1,27 @@
+﻿
+<ul class="list-unstyled">
+    <li ng-repeat="item in Feature_sets" id="{{item.id}}">
+    <a>
+        <span class="images">
+            <img src="images/secondTab/h1.png">
+        </span> 
+        <span ng-show="item.filterType=='Common'">{{item.filterCount}} common </span>
+        <span ng-show="item.filterType!='Common'">all </span>
+        <span ng-show="item.tokenizerType=='Word'">word</span>
+        <span ng-show="item.tokenizerType=='Letter'">letter</span>
+        <span ng-show="item.tokenizerType=='PartsOfSpeech'">part of speech</span>
+        <span ng-show="item.tokenizerType=='Morphology'">morphology</span>
+        <span ng-show="item.tokenizerType=='SyntaxClause'">Syntax clause</span>
+        <span ng-show="item.tokenizerType=='SyntaxPhrase'">Syntax phrase</span>
+        <span ng-show="item.vocalized && item.tokenizerType=='Word'">vocalized</span>
+        {{item.featureType | lowercase}}s
+
+        <span ng-show="$ctrl.showDeleteButton" ng-click="deleteFeatureSet($index)" class="right-edit">
+            <span title="Delete Feature Set" class="glyphicon glyphicon-remove"></span>
+        </span>
+        <span ng-show="$ctrl.showDeleteButton" ng-click="editFeatureSet($index)" class="right-edit">
+            <span title="Edit Features" class="fa fa-pencil"></span>
+        </span>
+    </a>
+    </li>
+</ul>

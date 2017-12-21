@@ -1,0 +1,69 @@
+﻿<fieldset>
+    <legend>Browse this computer</legend>
+    <div>
+        Select a zip file :<input type="file" autofocus file-model="$ctrl.zipFile" accept=".zip"
+                                  custom-on-change="$ctrl.file_changed"/>
+    </div>
+    <div ng-show="$ctrl.Browse_fileUploaded">
+        <fieldset>
+            <legend>Manage files</legend>
+            There are <code>{{$ctrl.browseData.textInfo.numberOfFiles}}</code> files with <code>{{$ctrl.browseData.textInfo.totalWordCount}}</code> words.
+            <table style="width:100%;">
+                <tr>
+                    <td>
+                        <input id="Browse_DoNotChunkId" type="radio" name="Browse_ChunkModeGroup"
+                               ng-model="$ctrl.browseData.chunkMode" value="DoNotChunk"/>
+                        <label for="Browse_DoNotChunkId">
+                            Do not chunk (each file is a single example)
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="Browse_AppendAndChunkId" type="radio" name="Browse_ChunkModeGroup"
+                               ng-model="$ctrl.browseData.chunkMode" value="AppendAndChunk"/>
+                        <label for="Browse_AppendAndChunkId">
+                            Append all files and then chunk (small files will be concatenated)
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="Browse_ChunkBigFilesId" type="radio" name="Browse_ChunkModeGroup"
+                               ng-model="$ctrl.browseData.chunkMode" value="ChunkBigFiles"/>
+                        <label for="Browse_ChunkBigFilesId">
+                            Chunk big files
+                        </label>
+                    </td>
+                </tr>
+                <tr ng-show="$ctrl.browseData.chunkMode!='DoNotChunk'">
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    Minimum chunk size
+                                </td>
+                                <td><input style="width:50px;" ng-change="$ctrl.calculateChunks()"
+                                           ng-model="$ctrl.browseData.chunkSize" type="text"/></td>
+                                <td>-words</td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <hr/>
+                        Now there are
+                        <span ng-show="$ctrl.browseData.chunkMode=='DoNotChunk'">{{$ctrl.browseData.textInfo.doNotChunk_ChunkSize}}</span>
+                        <span ng-show="$ctrl.browseData.chunkMode=='AppendAndChunk'">{{$ctrl.browseData.textInfo.appendAndChunk_ChunkSize}}</span>
+                        <span ng-show="$ctrl.browseData.chunkMode=='ChunkBigFiles'">{{$ctrl.browseData.textInfo.chunkBigFiles_ChunkSize}}</span>
+                        chunks in this class
+                        <hr/>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+
+</fieldset>

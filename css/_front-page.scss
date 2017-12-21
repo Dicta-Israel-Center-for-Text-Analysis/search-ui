@@ -1,0 +1,59 @@
+@import "base-design";
+
+/* front page */
+
+.form-inline input.search-control-class.form-control {
+    width: 350px;
+    margin-left: -50px;
+}
+
+.side-space {
+    padding: 0 27px;
+}
+
+.jumbo {
+    background-color: $porcelain;
+    padding-bottom: 125px;
+    color: $ebony-clay;
+}
+
+.jumbo-start {
+    padding-top: 125px;
+}
+
+.jumbo-text-selection {
+    padding-top: 53px;
+}
+
+.jumbo-subtext {
+    padding-top: 20px
+}
+
+.jumbo-subtext a {
+    text-decoration: underline;
+    color: $ebony-clay
+}
+
+.header-link {
+    color: darkgrey;
+}
+
+.main-logo {
+    padding-left: 60px;
+    font-size: 70px;
+    font-family: Martel, serif;
+    color: $ebony-clay;
+}
+
+.main-logo sup {
+    font-size: 20px;
+    top: -60px;
+    left: -40px;
+    font-weight: 600;
+}
+
+.search-control-class {
+    border: none;
+    box-shadow: none;
+    color: $grey;
+}

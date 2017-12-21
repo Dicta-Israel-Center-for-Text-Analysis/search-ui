@@ -1,0 +1,560 @@
+@import "base-design";
+@import "front-page";
+@import "search";
+@import "main-page";
+@import "segmentation";
+@import "classification";
+
+/* common pages */
+
+.rounded-btn {
+    height: 44px;
+    border-radius: 5px;
+    padding: 10px 0;
+    max-width: 215px;
+    width: 100%;
+    outline: none;
+    border: none;
+    &:focus {
+        outline: none;
+        border: 2px solid #0263BC;
+    }
+}
+
+.btn-blue {
+    color: white;
+    background-color: $dodger-blue;
+    &:hover {
+        background-color: $lighten-dodger-blue;
+    }
+}
+
+.btn-green {
+    color: $black-pearl;
+    background-color: $bright-turquoise;
+    &:hover {
+        background-color: $lighten-bright-turquoise;
+    }
+}
+
+.small-logo {
+    display: inline-block;
+    padding: 0 40px 0 0;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: Martel, serif;
+    color: #fff;
+}
+
+.small-logo sup {
+    font-size: 7px;
+    top: -18px;
+    left: -12px;
+    font-weight: 600;
+}
+
+.top-back-arrow {
+    color: $bright-turquoise;
+    font-size: 24px;
+    height: 67px;
+    width: 34px;
+    /*background-color: #646464;*/
+    padding: 22px 0 22px 0;
+    display: inline-block;
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-content {
+    background-color: transparent;
+}
+
+.ngdialog .ngdialog-message {
+    background-color: #fff;
+}
+
+.dialog-button-area {
+    height: 68px;
+    border-radius: 0 0 3px 3px;
+    background-color: $ebony-clay;
+    border: solid 1px #fff;
+    padding: 10px;
+    display: flex;
+}
+
+.dialog-close {
+    background-color: transparent;
+    color: white;
+    height: 3em;
+    width: 100%;
+    text-align: right;
+}
+
+.text-selection-rows, .preview-text {
+    height: 380px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 0 25px;
+    line-height: 32px;
+    @extend %fonts;
+}
+.text-selection-rows {
+    border-right: solid 1px $geyser;
+    padding-right: 5px;
+}
+
+.preview-text-message {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.text-selection-rows td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+}
+
+::placeholder {
+    opacity: 0.7;
+    font-style: italic;
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-message.choose-text-dialog {
+    /* margin: -1em; */
+    margin-bottom: 0 !important;
+    height: 500px;
+}
+
+.preview-name {
+    padding-left: 20px;
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    flex: auto;
+    height: 2em;
+    line-height: 1.15em;
+}
+
+.your-selection {
+    font-weight: normal;
+    color: $porcelain;
+    font-size: 13px;
+    line-height: 15px;
+    margin: 0;
+}
+
+.classification-controls {
+    padding: 5px;
+}
+.saved-data-table-row {
+    .subtitle {
+        color: $light-slate-grey;
+        padding-left: 10px;
+    }
+}
+
+.saved-data-table-row:hover {
+    background-color: $ebony-clay;
+    color: #fff;
+    .badge {
+        background-color: $bright-turquoise;
+        color: $ebony-clay;
+    }
+}
+
+.info-heading {
+    color: $black-pearl;
+    @extend %fonts;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.detail-icon {
+    color: $bright-turquoise;
+    font-size: 15px;
+    line-height: 16px;
+}
+
+.adjustment-text {
+    color: $black-pearl;
+    @extend %fonts;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 42px 0;
+}
+
+.main-heading {
+    text-transform: uppercase;
+    color: $black-pearl;
+    @extend %fonts;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 27px;
+}
+
+.text-with-features {
+    direction: rtl;
+    h2 {
+        color: $black-pearl;
+        font-size: 24px;
+        line-height: 33px;
+        text-align: right;
+    }
+    .classified-as {
+        font-size: 13px;
+        margin: 0 36px 24px;
+    }
+    p {
+        margin-right: 36px;
+        text-align: right;
+        line-height: 30px;
+        font-size: 18px;
+        @extend %fonts;
+    }
+}
+
+.text-title {
+    color: #1C222D;
+    @extend %fonts;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: right;
+}
+
+// generate classes like class-color-0, ...1, etc.
+@include generate-colors {
+    .class-color-#{$current-color-index} {
+            color: $current-color;
+    }
+}
+@include generate-colors {
+    .class-bg-color-#{$current-color-index} {
+        background-color: $current-color;
+    }
+}
+
+%class-segment-color {
+    padding-right: 5px;
+    margin-bottom: 30px;
+}
+
+@include generate-colors {
+    .class-segment-color-#{$current-color-index} {
+        @extend %class-segment-color;
+        border-right: solid 4px $current-color;
+    }
+}
+
+@include generate-colors {
+    .highlight-feature-color-#{$current-color-index} {
+        padding-bottom: 2px;
+        border-bottom: dashed $current-color 2px;
+    }
+}
+
+.segment {
+    margin-bottom: 10px;
+}
+.class-number {
+    color: #fff;
+    @extend %fonts;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 12px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
+    vertical-align: top;
+}
+
+.class-label {
+    @extend %fonts;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 36px;
+    display: inline;
+    margin-top: 20px;
+    padding: 10px;
+    h3, h4 {
+        //    display: inline-block;
+        font-size: inherit;
+        font-weight: inherit;
+        margin: inherit;
+    }
+    h3 {
+        display: inline;
+    }
+    h4 {
+        font-size: 13px;
+    }
+}
+.classification-summary-cv-box {
+    text-align: center;
+    border-left: 1px solid $geyser;
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.classification-summary-cv {
+    color: $ebony-clay;
+    @extend %fonts;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.2em;
+}
+.classification-summary-label {
+    color: $ebony-clay;
+    @extend %fonts;
+    font-size: 15px;
+    line-height: 24px;
+}
+.classification-summary-cv-details {
+    color: $ebony-clay;
+    @extend %fonts;
+    font-size: 15px;
+    line-height: 24px;
+    text-decoration: underline;
+}
+.classification-summary-features {
+    grid-column: 1;
+}
+.classification-summary {
+    @extend %results-summary;
+    display: grid;
+    grid-template-columns: 66% 34%;
+}
+.badge {
+    color: #fff;
+    font-weight: normal;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin: 5px 10px 5px 0;
+    background-color: $light-slate-grey;
+}
+.badge a {
+    color: #fff;
+    @extend %fonts;
+    font-size: 13px;
+    line-height: 20px;
+}
+.classification-summary-class-label{
+    font-weight: bold;
+    padding-top: 10px;
+}
+.main-data {
+    margin: 0 110px;
+}
+.training-classes {
+    border-radius: 3px;
+    border: solid 1px $geyser;
+}
+.training-class {
+    padding: 10px;
+}
+.training-class:not(:first-child) {
+    border-top: solid 1px $geyser;
+}
+.classification-controls-options {
+    padding: 10px;
+    a {
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+        text-decoration: underline;
+    }
+}
+.choose-dialog-add-description {
+    display: inline-block;
+    @extend %fonts;
+    align-self: center;
+    padding: 10px;
+    color: $porcelain;
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.add-description-input {
+    color: $black-pearl;
+    padding: 10px;
+}
+
+.login-chooser {
+    margin: auto;
+    .ngdialog-message {
+        padding: 30px;
+    }
+}
+
+.select-corpus-top-area {
+    background-color: #fff;
+    border: 1px solid $geyser;
+    border-radius: 0;
+    display: flex;
+}
+.select-corpus-breadcrumb {
+    display: inline-block;
+    width: 70%;
+    height: 60px;
+}
+
+.load-saved-link {
+    display: inline-block;
+    width: 29%; //should figure out why this can't be 30%
+    text-align: right;
+    padding-right: 20px;
+    .material-icons {
+        vertical-align: bottom;
+    }
+}
+
+.breadcrumb {
+    text-transform: uppercase;
+    padding: 23px 15px;
+    color: $light-slate-grey;
+    background-color: inherit;
+    margin-bottom: 0;
+}
+
+.breadcrumb > li:last-child {
+    color: $ebony-clay;
+}
+
+.breadcrumb > li + li:before {
+    content: '\00a0>\00a0';
+    padding: 0 5px;
+}
+
+.breadcrumb li a {
+    color: inherit;
+}
+
+.save-menu {
+    float: right;
+}
+.classify-save-message, .save-message {
+    color: $light-slate-grey;
+    float: right;
+    padding-right: 20px;
+}
+.classify-save-control {
+    float: right;
+}
+
+.text-classification-data-dialog {
+    height: 90vh;
+    padding: 25px;
+    td, th {
+      padding: 5px;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    .feature-area {
+      overflow-y: scroll;
+      will-change: transform;
+      max-height: calc(100% - 100px);
+    }
+}
+
+.classification-data-classname {
+    vertical-align: top;
+    h4 {
+      line-height: 23.1px;
+      margin-top: 0;
+    }
+}
+
+.select-corpus-checkbox, .select-corpus-arrow {
+    opacity: 0.5;
+    &:checked {
+        opacity: 1;
+    }
+}
+:hover > * > .select-corpus-checkbox, :hover > * > .select-corpus-arrow {
+    opacity: 1;
+}
+.select-corpus-arrow {
+    float: right;
+}
+
+.select-corpus-tabs {
+    text-align: center;
+    ul {
+        padding: 0;
+    }
+    li {
+        padding: 10px;
+        display: inline-block;
+        &.active {
+            border-bottom: solid 2px $geyser;
+        }
+    }
+}
+.select-corpus-select-all, .select-corpus-up {
+    width: 42px;
+    height: 60px;
+    border-right: solid 1px $geyser;
+}
+.select-corpus-select-all {
+    padding: 20px 10px 10px 13px;
+}
+.select-corpus-up {
+    padding: 18px 10px 10px 10px;
+}
+.wizard-heading {
+    background-color: $ebony-clay;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    .material-icons {
+        float: left;
+        color: white;
+        vertical-align: bottom;
+    }
+}
+
+.wizard-intro {
+    min-height: 500px;
+}
+
+.edit-featureset-dialog {
+    h1 {
+        color: #646464;
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 22px;
+    }
+    .material-icons {
+        vertical-align: bottom;
+    }
+    feature-table {
+        max-height: 500px;
+        margin-bottom: 30px;
+        overflow-y: auto;
+        display: block;
+        will-change: transform;
+    }
+    min-height: 550px;
+}
+
+.alternative-action {
+    @extend %fonts;
+    display: inline-block;
+    align-self: center;
+    color: #fff;
+    a {
+        font-weight: bold;
+        color: inherit;
+    }
+    padding: 0 10px;
+}
+
+.inherit-font-size {
+    font-size: inherit;
+}

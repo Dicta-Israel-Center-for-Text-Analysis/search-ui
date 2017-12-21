@@ -1,0 +1,11 @@
+﻿<div style="position: relative; width: 400px; height: 60px">
+
+    <div class="feature-freq-line"></div>
+    <div class="feature-freq-bars"></div>
+    <div ng-if="$ctrl.otheraverage !== undefined" class="feature-freq-other-dot" ng-style="$ctrl.otherDot"></div>
+    <div ng-if="$ctrl.otheraverage !== undefined" class="feature-freq-other-dot-label" ng-style="$ctrl.otherDotLabel">{{$ctrl.otheraverage}}</div>
+    <div ng-repeat-start="classaverage in $ctrl.classaverages track by $index" class="feature-freq-dot" ng-style="$ctrl.classDot($index)"></div>
+    <div ng-repeat-end class="feature-freq-dot-label" ng-style="$ctrl.classDotLabel($index)">{{classaverage}}</div>
+    <div ng-if="$ctrl.currentvalue !== undefined" class="feature-freq-arrow-down" ng-style="$ctrl.currentMark"></div>
+    <div ng-if="$ctrl.currentvalue !== undefined" class="feature-freq-arrow-down-label" ng-style="$ctrl.currentMarkLabel">{{$ctrl.currentvalue}}</div>
+</div>

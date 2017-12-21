@@ -1,0 +1,130 @@
+<div class="search-control">
+    <div class="search-top-bar">
+        <div class="search-top-left">
+            <span ng-if="!$ctrl.showBack" class="top-back-arrow">&nbsp;</span>
+            <span ng-if="$ctrl.showBack" class="top-back-arrow" ui-sref="bibleFrontpage"><i class="material-icons">keyboard_arrow_left</i></span>
+            <span class="small-logo">Dicta<sup>Bible</sup></span>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-xs-12">
+                    <form class="form-inline search-top-bar-form">
+                        <div class="search-autocomplete-container">
+                            <input class="search-top-bar-form-control search-top-bar-input search-control-class"
+                                   placeholder="Enter search terms"
+                                   ng-enter="$ctrl.runSearch()" ng-model="$ctrl.search.query" type="text">
+                        </div>
+                        <!-- suggestions aren't providing useful information yet -->
+                        <!--<angucomplete-alt id="search"
+                                          placeholder="Enter search terms"
+                                          pause="300"
+                                          selected-object="$ctrl.setSearchTerm"
+                                          remote-api-handler="$ctrl.runSuggest"
+                                          title-field="text"
+                                          class="search-autocomplete-container"
+                                          input-changed="$ctrl.inputChanged"
+                                          input-class="search-top-bar-form-control search-top-bar-input search-control-class"
+                                          text-no-results="false"
+                                          match-class="autocomplete-highlight"></angucomplete-alt>-->
+                        <button class="search-top-bar-button search-top-bar-form-control" ng-click="$ctrl.runSearch()"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-control-bar">
+        <!-- section for selecting particular meanings -->
+        <div class="col-xs-8">
+            &nbsp;
+            <span ng-repeat="wordData in $ctrl.variations | filter: $ctrl.multipleOptions">
+                <select ng-model="$ctrl.variationsSelected[$index]" ng-change="$ctrl.setVariations()">
+                    <option selected value="all">All {{wordData.term}} meanings</option>
+                    <option ng-repeat="lemmaData in wordData.variations" value="{{lemmaData.lemma}}">{{lemmaData.parsed_text}}</option>
+                </select>
+            </span>
+        </div>
+        <!-- sort by Tanakh or relevance -->
+        <div class="col-xs-4" ng-show="$ctrl.search.completeResults.length > 0">
+            <p>
+                <a ng-show="!$ctrl.search.sortByCorpusOrder" ng-click="$ctrl.toggleSortOrder()">Sort by
+                    Tanakh Order</a>
+                <span ng-show="$ctrl.search.sortByCorpusOrder">Sort by Tanakh Order</span>
+                |
+                <a ng-show="$ctrl.search.sortByCorpusOrder" ng-click="$ctrl.toggleSortOrder()">Sort by
+                    Relevance</a>
+                <span ng-show="!$ctrl.search.sortByCorpusOrder">Sort by Relevance</span>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="search-result-summary"
+                     ng-hide="$ctrl.search.searching
+                     || !$ctrl.search.searchResponse">
+                    <!-- how many results -->
+                    <p ng-hide="$ctrl.search.completeResults.length === 0">
+                        {{$ctrl.resultCountMessage()}}, showing results {{$ctrl.search.offset + 1}} -
+                        {{$ctrl.search.offset + $ctrl.search.searchResults.length}}.
+                        <span class="only-showing-verses" ng-if="$ctrl.moreResultsAvailable()">
+                            &nbsp; Only showing verses.
+                            <a ng-click="$ctrl.showLargeUnits()">Show all results.</a>
+                        </span>
+                        <span class="only-showing-verses" ng-if="$ctrl.showingLargeUnits()">
+                            <a ng-click="$ctrl.showSmallUnits()">Show only verses.</a>
+                        </span>
+                    </p>
+                    <p ng-show="$ctrl.search.completeResults.length === 0">No results found.</p>
+                </div>
+                <!-- related terms section -->
+                <div class="related-search-terms" ng-if="$ctrl.relatedSearchTerms()">
+                    <h2>Related Searches</h2>
+                    <span ng-repeat="variation in $ctrl.variations">
+                        <div ng-if="variation.synonyms.length > 0">Similar to {{variation.term}}:&#x200e;
+                            <span class="related-search-suggestion" ng-repeat="synonym in variation.synonyms track by $index"><a
+                                    ui-sref="{terms: $ctrl.makeLexemeQuery(synonym)}">{{$ctrl.lexemeToDescription(synonym)}}</a>
+                                {{$index !== variation.synonyms.length - 1 ?',':''}}&#x200e; </span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- loader if search is still running -->
+        <div style="text-align:center" ng-show="$ctrl.search.searching">
+            <img src="images/loader.gif"/>
+        </div>
+        <!-- actual results -->
+        <div class="row" ng-hide="$ctrl.search.searching || !$ctrl.search.searchResponse">
+            <div class="col-xs-8 search-result" ng-repeat="result in $ctrl.search.searchResults">
+                    <a href="{{$ctrl.getLink(result._source.english_path)}}" target="_blank"><h5 class="search-result-heading">{{result._source.english_path || result._source.displayname_eng}} <i class="material-icons">launch</i></h5></a>
+                    <!--<h5>Score: {{result._score}}</h5>-->
+                    <p class="search-result-text" dir="rtl">
+                        <span ng-repeat="sentence in $ctrl.highlight(result)">
+                            <span ng-if="sentence.containsMatch || result.showFull">
+                            <span ng-if="$ctrl.highlight(result).length > 1 && !(result._type === 'cross')">
+                                ({{$ctrl.numToHebrew($index + 1)}})&nbsp;</span><span ng-if="result._type === 'cross' && $index===1">
+                                        (א)&nbsp;</span><span
+                                  ng-repeat="word in sentence track by $index" context-menu="$ctrl.menuOptions"
+                                  context-menu-on="click"
+                                  ng-bind-html="word + ' '"></span>
+                            </span>
+                            <span ng-if="sentence.showEllipsis && !result.showFull"> ... </span>
+                        </span>
+                    </p>
+                <!-- toggle to show full result if showing a snippet -->
+                <div class="search-full-toggle text-center" ng-if="$ctrl.hasEllipsis(result)"><a ng-click="result.showFull = !result.showFull">
+                    <button class="btn btn-default" ng-hide="result.showFull">Show full result</button>
+                    <button class="btn btn-default" ng-show="result.showFull">Show matches only</button>
+                </a></div>
+            </div>
+            <!-- paging control -->
+            <div class="col-xs-8 text-center"
+                 ng-show="$ctrl.numResults() > $ctrl.search.RESULTS_AT_A_TIME">
+                <ul uib-pagination total-items="$ctrl.numResults()"
+                    items-per-page="$ctrl.search.RESULTS_AT_A_TIME" ng-model="$ctrl.currentPage"
+                    ng-change="$ctrl.updateResults()" max-size="5" class="pagination-sm"
+                    boundary-link-numbers="true"></ul>
+            </div>
+        </div>
+    </div>
+</div>
